@@ -19,6 +19,8 @@ The template gives each project a predictable structure for Codex and other AI c
 - `DECISIONS.md` stores durable decisions, exceptions, and rationale so future agents do not regress prior choices.
 - `TASKS.md` stores active work only.
 - `BACKLOG.md` stores future work and tiered priorities.
+- `prompts/` stores reusable AI workflow prompts.
+- `tasks/` stores generated PRDs and implementation task lists.
 
 ## How To Use
 
@@ -47,6 +49,8 @@ PROJECT_STATE.md
 DECISIONS.md
 TASKS.md
 BACKLOG.md
+prompts/
+tasks/
 ```
 
 ## Persistence Rule

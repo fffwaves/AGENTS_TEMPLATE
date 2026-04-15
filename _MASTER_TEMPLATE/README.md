@@ -26,6 +26,8 @@ Short description of what this project does and who it is for.
 - `components/` - UI components
 - `lib/` - shared utilities and domain logic
 - `tests/` - tests, if not colocated
+- `prompts/` - reusable AI workflow prompts
+- `tasks/` - generated PRDs and implementation task lists
 
 ## Environment
 
@@ -42,3 +44,6 @@ List required environment variables here. Do not include secret values.
 - `DECISIONS.md` - durable decisions and exceptions
 - `TASKS.md` - active work
 - `BACKLOG.md` - future work
+- `prompts/ai-dev-tasks/README.md` - PRD/task workflow source and local usage
+- `prompts/ai-dev-tasks/create-prd.md` - PRD generation prompt
+- `prompts/ai-dev-tasks/generate-tasks.md` - task-list generation prompt

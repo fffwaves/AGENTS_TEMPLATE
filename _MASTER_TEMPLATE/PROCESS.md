@@ -44,6 +44,16 @@ This file describes how to work in this repo. Keep project-specific commands and
 - PRDs should be clear enough for a junior developer to implement.
 - PRDs should include goals, user stories, functional requirements, non-goals, technical constraints, success metrics, and open questions when relevant.
 
+## PRD and Task Generation
+
+- Use `prompts/ai-dev-tasks/create-prd.md` to generate PRDs for new projects or major features.
+- Save generated PRDs as `tasks/prd-[feature-name].md`.
+- Use `prompts/ai-dev-tasks/generate-tasks.md` to generate implementation tasks from a PRD.
+- Save generated task lists as `tasks/tasks-[feature-name].md`.
+- Keep root `TASKS.md` as the short active-work dashboard, with links or pointers to generated task files when useful.
+- Do not start implementation during PRD generation.
+- When generating tasks, pause after parent tasks and wait for user confirmation before adding subtasks.
+
 ## Task Files
 
 - For large features, generate high-level parent tasks first, confirm direction, then generate subtasks.

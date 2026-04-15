@@ -10,6 +10,7 @@ This file is the instruction router. Keep it short.
 - Read `DECISIONS.md` when behavior depends on prior choices, exceptions, APIs, architecture, or product direction.
 - If working on active tasks, read `TASKS.md`.
 - Read `BACKLOG.md` only when asked to plan, prioritize, or pick new work.
+- If no active task exists and the user asks for new feature work, use the PRD and task-generation workflow in `PROCESS.md`.
 - For narrow questions, inspections, or reviews, load only the files needed for that request.
 
 ## Hard Rules
