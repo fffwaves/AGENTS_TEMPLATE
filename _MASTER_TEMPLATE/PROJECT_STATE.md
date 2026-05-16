@@ -11,6 +11,14 @@ Current project continuity file. Update this after every completed task, fix, me
 
 ## Last Work
 
+### 2026-05-16 - Added permission block wording
+
+- Summary: Replaced approval-wording examples with reusable `Go:` permission blocks and clarified that short `go`/`continue` means normal branch work only, never production/shared-state work.
+- Files touched: `COLLABORATION.md`, `PROJECT_STATE.md`
+- Verification: content inspection
+- Result: New projects can inherit clearer collaboration prompts without treating `Approved:` as a magic keyword.
+- Resume from: specialize permission blocks inside project repos as needed.
+
 ### 2026-05-16 - Added collaboration and data architecture template docs
 
 - Summary: Added generic multi-human/multi-agent collaboration rules, explicit approval gates for shared-state actions, handoff format, and data architecture guidance for storage, caching, analysis, and vector search.

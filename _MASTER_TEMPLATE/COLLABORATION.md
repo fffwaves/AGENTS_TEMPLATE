@@ -34,37 +34,91 @@ Then read:
 - Pull or fetch current `main` before starting work when practical.
 - Avoid editing the same files as another active task unless coordination is explicit.
 
-## Approval Levels
+## Permission Blocks
 
-Normal work approval allows scoped edits on a branch.
+`Go` is valid only within the exact scope written in the block.
 
-Example:
+Short instructions like `go`, `continue`, or `work on it` mean normal branch work only. They never authorize production/shared-state work.
 
-```text
-Approved: work on task "add DB inspection scripts" on a new branch.
-```
+Use these copy-paste blocks when delegating work:
 
-Production or shared-state approval must name the action and scope.
-
-Valid examples:
+### Normal Branch Work
 
 ```text
-Approved: push current committed changes to main.
-Approved: deploy production.
-Approved: delete smoke rows from production database only.
-Approved: update the production webhook URL.
+Go: work on this as normal branch work only. You may edit files, run local tests, commit, and push the feature branch. Do not push to main, deploy, change production config, or delete production data.
 ```
 
-Invalid for production or shared-state actions:
+### Commit Current Work
 
 ```text
-go
-continue
-do it
-ship it
+Go: commit the current scoped changes on the current branch after verification passes. Do not push to main.
 ```
 
-For normal coding, short approvals like `go` or `continue` are acceptable.
+### Push Feature Branch
+
+```text
+Go: push the current feature branch to origin. Do not push to main.
+```
+
+### Open PR
+
+```text
+Go: open a PR from the current feature branch into main. Do not merge it.
+```
+
+### Production Read-Only Check
+
+```text
+Go: run production verification in read-only mode. You may inspect logs, webhook status, deployment status, and database rows. Do not change config, deploy, or delete data.
+```
+
+### Production Webhook Fix
+
+```text
+Go: check the production webhook. If it points to the wrong production URL, update only the webhook URL. Do not change env vars, database data, or code.
+```
+
+### Deployment Check
+
+```text
+Go: inspect the current production deployment and logs. Do not redeploy, promote, change env vars, or change project settings.
+```
+
+### Deploy Existing Main
+
+```text
+Go: deploy the current main branch to production. Do not change code, env vars, database data, or webhook settings unless I separately say so.
+```
+
+### Database Dry-Run Cleanup
+
+```text
+Go: inspect the production database and run cleanup dry-run only for the named bad rows. Do not delete anything.
+```
+
+### Database Actual Cleanup
+
+```text
+Go: delete only the named bad production database rows. Do not delete any other assets, reports, provider snapshots, command logs, or user data.
+```
+
+### Provider/API Live Smoke
+
+```text
+Go: run one live provider/API smoke test for the specified query only. Do not run loops, bulk checks, paid high-volume calls, or cleanup.
+```
+
+### Full Production Verification
+
+```text
+Go: run full production verification for the current deployment: webhook status, deployment status/logs, database read-only inspection, and one smoke flow. Do not delete data, change env vars, or deploy unless I separately say so.
+```
+
+### Main Push
+
+```text
+Go: push the current committed changes to main. Run verification first. Do not deploy, change production config, or delete production data unless I separately say so.
+```
 
 ## Shared-State Safety
 
