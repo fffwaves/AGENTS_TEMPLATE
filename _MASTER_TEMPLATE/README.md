@@ -41,6 +41,8 @@ List required environment variables here. Do not include secret values.
 - `PROJECT_STATE.md` - current status, last work, next steps
 - `RULES.md` - project-specific rules and overrides
 - `PROCESS.md` - how to work in this repo
+- `COLLABORATION.md` - multi-human and multi-agent workflow rules
+- `DATA_ARCHITECTURE.md` - storage, cache, analytics, and generated data guidance
 - `DECISIONS.md` - durable decisions and exceptions
 - `TASKS.md` - active work
 - `BACKLOG.md` - future work

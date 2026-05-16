@@ -7,15 +7,25 @@ This file describes how to work in this repo. Keep project-specific commands and
 1. Read `README.md` for setup, stack, and commands.
 2. Read `PROJECT_STATE.md` for current status and last work.
 3. Read `RULES.md` for project-specific rules.
-4. Check `TASKS.md` for active work.
-5. Pick one task or clarify scope.
-6. Make the smallest scoped change that solves the task.
-7. Add or update tests when behavior changes.
-8. Run the relevant verification command.
-9. Mark completed tasks in `TASKS.md`.
-10. Update `PROJECT_STATE.md` with what changed, verification, and next steps.
-11. Update `DECISIONS.md` if the work introduced or depended on a durable decision.
-12. Commit when stable, unless told not to.
+4. Read `COLLABORATION.md` when other collaborators or AI harnesses are active.
+5. Check `TASKS.md` for active work.
+6. Pick one task or clarify scope.
+7. Make the smallest scoped change that solves the task.
+8. Add or update tests when behavior changes.
+9. Run the relevant verification command.
+10. Mark completed tasks in `TASKS.md`.
+11. Update `PROJECT_STATE.md` with what changed, verification, and next steps.
+12. Update `DECISIONS.md` if the work introduced or depended on a durable decision.
+13. Commit when stable, unless told not to.
+
+## Collaboration
+
+- Use `COLLABORATION.md` as the shared workflow for multi-human or multi-agent work.
+- Work on a branch for non-trivial changes.
+- Do not push to `main` without explicit approval.
+- Do not deploy, change production config, update webhooks, or run destructive data changes without explicit approval naming the action and scope.
+- Record task ownership before editing when multiple collaborators are active.
+- Use the handoff format in `COLLABORATION.md` when pausing or handing work to another collaborator.
 
 ## Persistence Rules
 
@@ -116,6 +126,7 @@ This file describes how to work in this repo. Keep project-specific commands and
 
 - Do not exfiltrate private data.
 - Do not run destructive commands without explicit approval.
+- Do not push to `main`, deploy production, change webhooks, change production environment variables, or run paid/high-volume provider calls without explicit approval.
 - Prefer recoverable deletion over permanent deletion.
 - Ask before actions that leave the machine or affect external systems, unless already clearly requested.
 - Do not commit secrets, API keys, credentials, or private tokens.

@@ -10,6 +10,8 @@ This file is the instruction router. Keep it short.
 - Read `DECISIONS.md` when behavior depends on prior choices, exceptions, APIs, architecture, or product direction.
 - If working on active tasks, read `TASKS.md`.
 - Read `BACKLOG.md` only when asked to plan, prioritize, or pick new work.
+- Read `COLLABORATION.md` when another human or AI harness is active, or when work may affect shared state.
+- Read `DATA_ARCHITECTURE.md` before changing storage, cache, analytics, memory, or generated data flows when present.
 - If no active task exists and the user asks for new feature work, use the PRD and task-generation workflow in `PROCESS.md`.
 - For narrow questions, inspections, or reviews, load only the files needed for that request.
 
@@ -19,6 +21,7 @@ This file is the instruction router. Keep it short.
 - Follow existing project conventions.
 - Do not overwrite user changes.
 - Do not expose or commit secrets.
+- Do not push to `main`, deploy, change production config, or run destructive data changes without explicit approval.
 - Run the relevant verification command before finishing when possible.
 - After completing a task, update `PROJECT_STATE.md`.
 - When a durable decision or exception is made, update `DECISIONS.md`.

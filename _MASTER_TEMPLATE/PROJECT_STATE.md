@@ -5,11 +5,19 @@ Current project continuity file. Update this after every completed task, fix, me
 ## Current Status
 
 - Status: planning
-- Last updated: 2026-04-15
+- Last updated: 2026-05-16
 - Current focus: Template workflow setup
 - Next step: Use `prompts/ai-dev-tasks/create-prd.md` for the first major feature PRD when scope is ready.
 
 ## Last Work
+
+### 2026-05-16 - Added collaboration and data architecture template docs
+
+- Summary: Added generic multi-human/multi-agent collaboration rules, explicit approval gates for shared-state actions, handoff format, and data architecture guidance for storage, caching, analysis, and vector search.
+- Files touched: `COLLABORATION.md`, `DATA_ARCHITECTURE.md`, `AGENTS.md`, `PROCESS.md`, `README.md`, `DECISIONS.md`, `PROJECT_STATE.md`
+- Verification: content inspection
+- Result: New projects copied from the template can inherit collaboration and data-architecture guidance instead of inventing it per repo.
+- Resume from: use the template normally and specialize `COLLABORATION.md` or `DATA_ARCHITECTURE.md` inside project repos.
 
 ### 2026-04-15 - Clarified empty-task startup workflow
 
